@@ -13,6 +13,7 @@ document.getElementById('ask-btn').addEventListener('click', async () => {
     
     // Send the question to the FastAPI backend
     const response = await fetch(`https://hr-fqa-latest.onrender.com/ask-hr/?question=${encodeURIComponent(question)}`);
+    
     const data = await response.json();
     
     // Add the response to the chat
